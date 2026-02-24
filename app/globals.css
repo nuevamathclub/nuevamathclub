@@ -186,84 +186,8 @@ nav {
   opacity: 0;
   animation: fadeUp 0.8s ease 0.6s forwards;
   transition: color 0.35s;
-  font-weight: 400;
 }
 
-/* ── HOLOGRAPHIC LOGO ── */
-.hero-logo-wrap {
-  position: relative;
-  z-index: 1;
-  flex: 0 0 420px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  animation: fadeUp 1s ease 0.7s forwards;
-  transform: translateX(-200px);
-}
-
-.holo-svg {
-  width: 100%;
-  max-width: 420px;
-  animation: holoShift 6s linear infinite;
-}
-
-@keyframes holoShift {
-  0%   {
-    filter: drop-shadow(0 0 16px rgba(201,168,76, 0.5))
-            drop-shadow(0 0 40px rgba(201,168,76, 0.2));
-  }
-  16%  {
-    filter: drop-shadow(0 0 20px rgba(80, 220, 200, 0.55))
-            drop-shadow(0 0 45px rgba(80, 220, 200, 0.22));
-  }
-  33%  {
-    filter: drop-shadow(0 0 18px rgba(100, 160, 255, 0.55))
-            drop-shadow(0 0 42px rgba(100, 160, 255, 0.22));
-  }
-  50%  {
-    filter: drop-shadow(0 0 20px rgba(200, 100, 255, 0.55))
-            drop-shadow(0 0 45px rgba(200, 100, 255, 0.22));
-  }
-  66%  {
-    filter: drop-shadow(0 0 18px rgba(255, 120, 160, 0.5))
-            drop-shadow(0 0 42px rgba(255, 120, 160, 0.2));
-  }
-  83%  {
-    filter: drop-shadow(0 0 20px rgba(255, 200, 80, 0.5))
-            drop-shadow(0 0 45px rgba(255, 200, 80, 0.2));
-  }
-  100% {
-    filter: drop-shadow(0 0 16px rgba(201,168,76, 0.5))
-            drop-shadow(0 0 40px rgba(201,168,76, 0.2));
-  }
-}
-
-.holo-stroke {
-  animation: holoStroke 6s linear infinite;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-@keyframes holoStroke {
-  0%   { stroke: #c9a84c; }
-  16%  { stroke: #50dcc8; }
-  33%  { stroke: #64a0ff; }
-  50%  { stroke: #c864ff; }
-  66%  { stroke: #ff78a0; }
-  83%  { stroke: #ffc850; }
-  100% { stroke: #c9a84c; }
-}
-
-.holo-inner {
-  animation: holoFloat 5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes holoFloat {
-  0%, 100% { transform: translateY(0px);   }
-  50%       { transform: translateY(-12px); }
-}
 
 /* ── DIVIDER ── */
 .divider {
@@ -302,7 +226,6 @@ nav {
   line-height: 1.85;
   color: var(--muted);
   transition: color 0.35s;
-  font-weight: 400;
 }
 
 /* ── FEATURE CARDS ── */
@@ -346,7 +269,6 @@ nav {
   line-height: 1.6;
   color: var(--muted);
   transition: color 0.35s;
-  font-weight: 400;
 }
 
 /* ── SOCIALS ── */

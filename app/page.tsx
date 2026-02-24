@@ -18,13 +18,13 @@ export default function Home() {
 
       {/* NAV */}
       <nav>
-        <a href="https://nuevamathclub.org" className="nav-logo">Nueva Math Club</a>
+        <a href="https://nuevamath.club" className="nav-logo">Nueva Math Club</a>
         <div className="nav-right">
           <ul className="nav-links">
-            <li><a href="https://about.nuevamathclub.org">About</a></li>
-            <li><a href="https://events.nuevamathclub.org">Events</a></li>
-            <li><a href="https://competitions.nuevamathclub.org">Competitions</a></li>
-            <li><a href="https://join.nuevamathclub.org">Join</a></li>
+            <li><a href="https://about.nuevamath.club">About</a></li>
+            <li><a href="https://events.nuevamath.club">Events</a></li>
+            <li><a href="https://competitions.nuevamath.club">Competitions</a></li>
+            <li><a href="https://join.nuevamath.club">Join</a></li>
           </ul>
           <button
             className="theme-btn"
@@ -51,72 +51,7 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Right: holographic logo */}
-        <div className="hero-logo-wrap">
-          <svg
-            className="holo-svg"
-            viewBox="0 0 420 420"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%"   stopColor="#7dd3fc" stopOpacity="0.07" />
-                <stop offset="100%" stopColor="#7dd3fc" stopOpacity="0" />
-              </radialGradient>
-              <linearGradient id="faceTop" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.06" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.01" />
-              </linearGradient>
-              <linearGradient id="faceLt" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.03" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.01" />
-              </linearGradient>
-              <linearGradient id="faceRt" x1="1" y1="0" x2="0" y2="1">
-                <stop offset="0%"   stopColor="#ffffff" stopOpacity="0.05" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.01" />
-              </linearGradient>
-            </defs>
 
-            <circle cx="210" cy="210" r="180" fill="url(#bgGlow)" />
-
-            <g className="holo-inner">
-
-              {/* Left outer vertical */}
-              <line className="holo-stroke" x1="80"  y1="80"  x2="80"  y2="340" strokeWidth="15" />
-              {/* Left inward prong */}
-              <line className="holo-stroke" x1="80"  y1="80"  x2="150" y2="150" strokeWidth="15" />
-
-              {/* Right outer vertical */}
-              <line className="holo-stroke" x1="340" y1="80"  x2="340" y2="340" strokeWidth="15" />
-              {/* Right inward prong */}
-              <line className="holo-stroke" x1="270" y1="270" x2="340" y2="340" strokeWidth="15" />
-
-              {/* Face fills */}
-              <polygon points="210,145 266,177.5 210,210 154,177.5" fill="url(#faceTop)" />
-              <polygon points="154,177.5 210,210 210,275 154,242.5" fill="url(#faceLt)"  />
-              <polygon points="266,177.5 210,210 210,275 266,242.5" fill="url(#faceRt)"  />
-
-              {/* Top face edges */}
-              <line className="holo-stroke" x1="210" y1="145"   x2="154" y2="177.5" strokeWidth="11" />
-              <line className="holo-stroke" x1="210" y1="145"   x2="266" y2="177.5" strokeWidth="11" />
-              <line className="holo-stroke" x1="154" y1="177.5" x2="210" y2="210"   strokeWidth="11" />
-              <line className="holo-stroke" x1="266" y1="177.5" x2="210" y2="210"   strokeWidth="11" />
-
-              {/* Center vertical spine */}
-              <line className="holo-stroke" x1="210" y1="210"   x2="210" y2="275"   strokeWidth="11" />
-
-              {/* Left face edges */}
-              <line className="holo-stroke" x1="154" y1="177.5" x2="154" y2="242.5" strokeWidth="11" />
-              <line className="holo-stroke" x1="154" y1="242.5" x2="210" y2="275"   strokeWidth="11" />
-
-              {/* Right face edges */}
-              <line className="holo-stroke" x1="266" y1="177.5" x2="266" y2="242.5" strokeWidth="11" />
-              <line className="holo-stroke" x1="266" y1="242.5" x2="210" y2="275"   strokeWidth="11" />
-
-            </g>
-          </svg>
-        </div>
       </div>
 
       <div className="divider" />
@@ -125,7 +60,7 @@ export default function Home() {
       <div className="about">
         <div className="about-grid">
           <div>
-            <span className="section-tag">About Us</span>
+            <span className="section-tag">// About Us</span>
             <p className="section-body">
               The Nueva Math Club brings together students who share a love for mathematics and problem-solving. We meet weekly to solve difficult puzzles, connect students to competitions, and provide a supportive learning environment where all students can grow. All levels of experience are welcome!
               <br /><br />
@@ -133,7 +68,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <span className="section-tag">Events & Projects</span>
+            <span className="section-tag">// Events & Projects</span>
             <div className="features">
               <div className="feature-card">
                 <span className="feature-icon">🏆</span>
@@ -191,7 +126,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer>
         <div className="footer-logo">Nueva Math Club</div>
-        <p className="footer-copy">© {new Date().getFullYear()} Nueva Math Club · nuevamathclub.org</p>
+        <p className="footer-copy">© {new Date().getFullYear()} Nueva Math Club · nuevamath.club</p>
       </footer>
 
     </div>
