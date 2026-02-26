@@ -38,20 +38,17 @@ export default function Home() {
 
       {/* HERO */}
       <div className="hero">
-
-        {/* Left: text */}
         <div className="hero-text">
           <p className="hero-eyebrow">The Nueva School · San Mateo, CA</p>
           <h1 className="hero-title">
             Nueva
-            <em>Math Club</em>
+            {/* Gold color kept, italic removed */}
+            <span style={{ color: "var(--gold)", display: "block" }}>Math Club</span>
           </h1>
           <p className="hero-sub">
             A student-run, student-led club that aims to make math both fun and challenging for everyone.
           </p>
         </div>
-
-
       </div>
 
       <div className="divider" />
@@ -60,37 +57,31 @@ export default function Home() {
       <div className="about">
         <div className="about-grid">
           <div>
-            <span className="section-tag">// About Us</span>
+            <span className="section-tag">About Us</span>
             <p className="section-body">
               The Nueva Math Club brings together students who share a love for mathematics and problem-solving. We meet weekly to solve difficult puzzles, connect students to competitions, and provide a supportive learning environment where all students can grow. All levels of experience are welcome!
               <br /><br />
               We are also proud to host the Nueva Math Tournament each year for local middle school students, inspiring young mathematicians to follow their curiosity and hone their skills.
             </p>
           </div>
-          <div>
-            <span className="section-tag">// Events & Projects</span>
-            <div className="features">
-              <div className="feature-card">
-                <span className="feature-icon">🏆</span>
-                <div className="feature-title">Competitions</div>
-                <div className="feature-desc">AMC, AIME, ARML, HMMT, USAMO and more throughout the year.</div>
-              </div>
-              <div className="feature-card">
-                <span className="feature-icon">📐</span>
-                <div className="feature-title">Problem Sessions</div>
-                <div className="feature-desc">Weekly meetings with challenging, collaborative problem sets.</div>
-              </div>
-              <div className="feature-card">
-                <span className="feature-icon">📄</span>
-                <div className="feature-title">Past Tests</div>
-                <div className="feature-desc">A growing archive of competition problems and solutions.</div>
-              </div>
-              <div className="feature-card">
-                <span className="feature-icon">🤝</span>
-                <div className="feature-title">Community</div>
-                <div className="feature-desc">A welcoming space for all levels, from beginners to Olympians.</div>
-              </div>
-            </div>
+
+          {/* PHOTO — replace the src below with your image path */}
+          <div style={{
+            width: "100%",
+            aspectRatio: "4 / 3",
+            overflow: "hidden",
+            border: "1px solid var(--border)",
+          }}>
+            <img
+              src="/photos/group-photo-24.jpg"  // ← replace with your image path
+              alt="Nueva Math Club"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
           </div>
         </div>
       </div>
