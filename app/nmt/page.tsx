@@ -342,7 +342,7 @@ export default function NMT() {
       <div className="about" style={{paddingTop: "5rem", paddingBottom: "5rem"}}>
         <span className="section-tag">Past Results</span>
         <p className="section-body" style={{marginTop: "0.25rem", marginBottom: "2.5rem"}}>
-          Each year, we reward the top 3 scores in each test with awards and certificates. Below are the results from past competitions; congratulations to all the amazing mathletes who participated!
+          Each year, we reward the top 3 scores in each category with awards and certificates. Below are the results from previous competitions; congratulations to all the amazing mathletes who participated!
         </p>
         <div style={{display: "flex", flexDirection: "column", gap: "3rem"}}>
           {pastResults.map(yr => (
