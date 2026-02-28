@@ -1,6 +1,5 @@
 "use client";
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
+import { useState, useEffect } from "react";
 
 /*
   ── EMAIL SETUP ──
@@ -16,14 +15,23 @@ import emailjs from "@emailjs/browser";
   4. Copy your Public Key from Account → API Keys
   5. Fill in the three constants below:
 */
-const EMAILJS_SERVICE_ID  = "service_s0fkcr6";   // ← replace
-const EMAILJS_TEMPLATE_ID = "template_24k7srt";  // ← replace
-const EMAILJS_PUBLIC_KEY  = "clQATy7S7s5EzUt10";    // ← replace
+const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // ← replace
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // ← replace
+const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";    // ← replace
 
-const CONTACT_EMAIL = "nuevamathclub@nuevaschool.org";
+const CONTACT_EMAIL = "mathclub@nuevaschool.org";
 
 export default function Contact() {
   const [dark, setDark] = useState(true);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("nmc-theme");
+    if (stored) setDark(stored === "dark");
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("nmc-theme", dark ? "dark" : "light");
+  }, [dark]);
   const [form, setForm] = useState({ email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -34,6 +42,17 @@ export default function Contact() {
   const handleSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
     if (!form.email || !form.subject || !form.message) return;
+
+    // If EmailJS isn't configured yet, fall back to mailto
+    if (
+      EMAILJS_SERVICE_ID === "YOUR_SERVICE_ID" ||
+      EMAILJS_TEMPLATE_ID === "YOUR_TEMPLATE_ID" ||
+      EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY"
+    ) {
+      const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(`From: ${form.email}\n\n${form.message}`)}`;
+      window.location.href = mailto;
+      return;
+    }
 
     setStatus("sending");
     try {
@@ -91,6 +110,7 @@ export default function Contact() {
           <ul className="nav-links">
             <li><a href="https://nuevamath.club">Home</a></li>
             <li><a href="https://nuevamath.club/nmt">NMT</a></li>
+            <li><a href="https://nuevamath.club/team">Meet the Team</a></li>
             <li><a href="https://nuevamath.club/contact" style={{color: "var(--gold)"}}>Contact Us</a></li>
           </ul>
           <button
@@ -135,7 +155,7 @@ export default function Contact() {
           marginBottom: "1rem", opacity: 0, animation: "fadeUp 0.8s ease 0.4s forwards",
           position: "relative", zIndex: 1,
         }}>
-          CONTACT US
+          Contact Us
         </h1>
 
         <p style={{
@@ -144,7 +164,7 @@ export default function Contact() {
           opacity: 0, animation: "fadeUp 0.8s ease 0.6s forwards",
           position: "relative", zIndex: 1,
         }}>
-          Want to get involved? Have a question? Send us a message and we'll get back to you as soon as we can!
+          Have a question, want to get involved, or just want to say hi? Send us a message and we'll get back to you.
         </p>
       </div>
 
@@ -243,7 +263,7 @@ export default function Contact() {
                 {status === "success" && (
                   <span style={{
                     fontFamily: "'DM Mono', monospace", fontSize: "0.78rem",
-                    letterSpacing: "0.1em", color: "var(--gold)",
+                    letterSpacing: "0.1em", color: "#6ee7b7",
                   }}>
                     ✓ Message sent!
                   </span>
@@ -337,8 +357,8 @@ export default function Contact() {
                 color: "var(--cream)", fontWeight: 400, lineHeight: 1.6,
               }}>
                 The Nueva School<br />
-                131 E 28th Ave<br />
-                San Mateo, CA 94403
+                6565 Skyline Blvd<br />
+                Hillsborough, CA 94010
               </p>
             </div>
 
