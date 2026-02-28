@@ -110,8 +110,7 @@ export default function Contact() {
           <ul className="nav-links">
             <li><a href="https://nuevamath.club">Home</a></li>
             <li><a href="https://nuevamath.club/nmt">NMT</a></li>
-            <li><a href="https://nuevamath.club/team">Meet the Team</a></li>
-            <li><a href="https://nuevamath.club/contact" style={{color: "var(--gold)"}}>Contact Us</a></li>
+            <li><a href="https://nuevamath.club/contact" style={{color: "var(--gold)"}}>CONTACT US</a></li>
           </ul>
           <button
             className="theme-btn"
@@ -145,7 +144,7 @@ export default function Contact() {
           marginBottom: "1.25rem", opacity: 0, animation: "fadeUp 0.8s ease 0.2s forwards",
           position: "relative", zIndex: 1,
         }}>
-          Nueva Math Club
+          Nueva Math Club • Contact Us
         </p>
 
         <h1 style={{
@@ -155,7 +154,7 @@ export default function Contact() {
           marginBottom: "1rem", opacity: 0, animation: "fadeUp 0.8s ease 0.4s forwards",
           position: "relative", zIndex: 1,
         }}>
-          Contact Us
+          CONTACT US
         </h1>
 
         <p style={{
@@ -164,7 +163,7 @@ export default function Contact() {
           opacity: 0, animation: "fadeUp 0.8s ease 0.6s forwards",
           position: "relative", zIndex: 1,
         }}>
-          Have a question, want to get involved, or just want to say hi? Send us a message and we'll get back to you.
+          Have a question? Want to get involved? Send us a message and we'll get back to you as soon as we can!
         </p>
       </div>
 
@@ -181,7 +180,7 @@ export default function Contact() {
 
           {/* Left: form */}
           <div>
-            <span className="section-tag">Send a Message</span>
+            <span className="section-tag">SEND A MESSAGE</span>
 
             <div style={{display: "flex", flexDirection: "column", gap: "1.5rem", marginTop: "1.75rem"}}>
 
@@ -263,7 +262,7 @@ export default function Contact() {
                 {status === "success" && (
                   <span style={{
                     fontFamily: "'DM Mono', monospace", fontSize: "0.78rem",
-                    letterSpacing: "0.1em", color: "#6ee7b7",
+                    letterSpacing: "0.1em", color: "var(--gold)",
                   }}>
                     ✓ Message sent!
                   </span>
@@ -357,8 +356,8 @@ export default function Contact() {
                 color: "var(--cream)", fontWeight: 400, lineHeight: 1.6,
               }}>
                 The Nueva School<br />
-                6565 Skyline Blvd<br />
-                Hillsborough, CA 94010
+                131 E 28th Ave<br />
+                San Mateo, CA 94403
               </p>
             </div>
 

@@ -277,7 +277,7 @@ export default function NMT() {
 
       {/* ── ABOUT ── */}
       <div className="about">
-        <span className="section-tag">About NMT</span>
+        <span className="section-tag">ABOUT NMT</span>
         <div style={{display: "flex", flexDirection: "column", gap: "1.25rem", alignItems: "center", justifyContent: "center"}}>
           <p className="section-body">
             Founded in 2024, the Nueva Math Tournament (NMT) is an annual math competition organized and hosted entirely by members of the Nueva Math Club. Each spring, we invite middle schoolers from across the Bay Area to The Nueva School's San Mateo campus to compete in individual and team rounds covering a range of topics and difficulty levels. Whether you're a first-time competitor or a seasoned mathlete, NMT offers an exciting environment to test your skills and connect with other mathematicians. We hope our competition can foster a love for problem-solving and create a supportive community where students can grow and thrive in mathematics!
@@ -292,7 +292,7 @@ export default function NMT() {
 
       {/* ── PAST TESTS ── */}
       <div className="about" style={{paddingTop: "5rem", paddingBottom: "5rem"}}>
-        <span className="section-tag">Past Tests</span>
+        <span className="section-tag">PAST TESTS</span>
         <p className="section-body" style={{marginTop: "0.25rem", marginBottom: "2rem"}}>
           We design our tournament problems after other middle school contests such as AMC 8, MathCounts, and Math Kangaroo. We've received feedback that our problems are slightly too difficult, and are working to strike a better balance in future competitions to ensure an enjoyable experience for all participants, regardless of their prior math background. Nonetheless, we have attached past tests here for reference and practice for future competitors who are looking for an extra challenge!
         </p>
@@ -343,7 +343,7 @@ export default function NMT() {
 
       {/* ── PAST RESULTS ── */}
       <div className="about" style={{paddingTop: "5rem", paddingBottom: "5rem"}}>
-        <span className="section-tag">Past Results</span>
+        <span className="section-tag">PAST RESULTS</span>
         <p className="section-body" style={{marginTop: "0.25rem", marginBottom: "2.5rem"}}>
           Each year, we reward the top 3 scores in each category with awards and certificates. Below are the results from previous competitions; congratulations to all the amazing mathletes who participated!
         </p>

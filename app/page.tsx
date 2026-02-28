@@ -40,9 +40,9 @@ export default function Home() {
         <div className="hero-text">
           <p className="hero-eyebrow">The Nueva School · San Mateo, CA</p>
           <h1 className="hero-title">
-            Nueva
+            NUEVA
             {/* Gold color kept, italic removed */}
-            <span style={{ color: "var(--gold)", display: "block" }}>Math Club</span>
+            <span style={{ color: "var(--gold)", display: "block" }}>MATH CLUB</span>
           </h1>
           <p className="hero-sub">
             A student-run, student-led club that aims to make math both fun and challenging for everyone.
@@ -56,7 +56,7 @@ export default function Home() {
       <div className="about">
         <div className="about-grid">
           <div>
-            <span className="section-tag">About Us</span>
+            <span className="section-tag">ABOUT US</span>
             <p className="section-body">
               The Nueva Math Club brings together students who share a love for mathematics and problem-solving. We meet weekly to solve difficult puzzles, connect students to competitions, and provide a supportive learning environment where all students can grow.  Join us on Mondays after school in room 317; all levels of experience are welcome!
               <br /><br />
