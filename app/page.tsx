@@ -21,10 +21,9 @@ export default function Home() {
         <a href="https://nuevamath.club" className="nav-logo">Nueva Math Club</a>
         <div className="nav-right">
           <ul className="nav-links">
-            <li><a href="https://about.nuevamath.club">About</a></li>
-            <li><a href="https://events.nuevamath.club">Events</a></li>
-            <li><a href="https://competitions.nuevamath.club">Competitions</a></li>
-            <li><a href="https://join.nuevamath.club">Join</a></li>
+            <li><a href="https://nuevamath.club" style={{color: "var(--gold)"}}>Home</a></li>
+            <li><a href="https://nuevamath.club/nmt">NMT</a></li>
+            <li><a href="https://nuevamath.club/contact">Contact Us</a></li>
           </ul>
           <button
             className="theme-btn"
@@ -59,7 +58,7 @@ export default function Home() {
           <div>
             <span className="section-tag">About Us</span>
             <p className="section-body">
-              The Nueva Math Club brings together students who share a love for mathematics and problem-solving. We meet weekly to solve difficult puzzles, connect students to competitions, and provide a supportive learning environment where all students can grow. All levels of experience are welcome!
+              The Nueva Math Club brings together students who share a love for mathematics and problem-solving. We meet weekly to solve difficult puzzles, connect students to competitions, and provide a supportive learning environment where all students can grow.  Join us on Mondays after school in room 317; all levels of experience are welcome!
               <br /><br />
               We are also proud to host the Nueva Math Tournament each year for local middle school students, inspiring young mathematicians to follow their curiosity and hone their skills.
             </p>

@@ -178,10 +178,13 @@ export default function NMT() {
           <ul className="nav-links">
             <li><a href="https://nuevamath.club">Home</a></li>
             <li><a href="https://nuevamath.club/nmt" style={{color: "var(--gold)"}}>NMT</a></li>
-            <li><a href="https://events.nuevamath.club">Events</a></li>
-            <li><a href="https://competitions.nuevamath.club">Competitions</a></li>
+            <li><a href="https://nuevamath.club/contact">Contact Us</a></li>
           </ul>
-          <button className="theme-btn" aria-label="Toggle dark mode" onClick={() => setDark(d => !d)}>
+          <button
+            className="theme-btn"
+            aria-label="Toggle dark mode"
+            onClick={() => setDark(d => !d)}
+          >
             {dark ? "☀" : "☽"}
           </button>
         </div>
