@@ -49,8 +49,6 @@ export default function NMT() {
   };
 
   // ── PAST TESTS ──
-  // Replace href values with real PDF paths when ready.
-  // Set href to "" to show the button as disabled.
   const pastTests = [
     {
       year: "NMT 2025",
@@ -78,6 +76,20 @@ export default function NMT() {
         { name: "Puzzle",     href: "/nmt/2024/puzzle-solutions.pdf" },
       ],
     },
+  ];
+
+  // ── SCHEDULE ──
+  // Edit times, descriptions, and notes here.
+  const schedule = [
+    { time: "4:00 PM – 4:30 PM", event: "Check-In Opens",           desc: "Teams arrive, check in, and get settled. Coaches are responsible for managing all of their team members.", note: "30 min" },
+    { time: "4:30 PM – 4:40 PM", event: "Introductions",            desc: "Doors close immediately following our opening remarks regarding the competition's format and rules.",      note: "10 min" },
+    { time: "4:50 PM – 5:35 PM", event: "Individual Round",         desc: "45-minute test; each competitor works independently on the test provided, which contains 20 problems.",    note: "45 min" },
+    { time: "5:45 PM – 6:10 PM", event: "Puzzle Round",             desc: "Teams work together on a creative, non-standard challenge. Format varies each year.",                      note: "25 min" },
+    { time: "6:20 PM – 7:05 PM", event: "Dinner",                   desc: "Participants can choose between cheese or pepperoni pizza.",                                               note: "45 min" },
+    { time: "7:15 PM – 7:45 PM", event: "Team Round",               desc: "Teams collaborate on a shared problem set containing ten questions.",                                      note: "30 min" },
+    { time: "7:45 PM – 8:30 PM", event: "Activities & Tiebreakers", desc: "Head-to-head rounds for top individual scorers while all other participants engage in fun activities.",    note: "45 min" },
+    { time: "8:30 PM – 9:00 PM", event: "Buffer Time",              desc: "Additional time available for any last-minute preparations or activities needed.",                         note: "30 min" },
+    { time: "9:00 PM – 9:30 PM", event: "Award Ceremony",           desc: "Top finishers in Individual, Team, and Puzzle rounds receive medals and certificates!",                    note: "30 min" },
   ];
 
   // ── PAST RESULTS ──
@@ -129,8 +141,7 @@ export default function NMT() {
     "T-3rd": "#b08060",
   };
 
-  // Reusable download button
-  const DownloadBtn = ({ name, href, label }: { name: string; href: string; label?: string }) => (
+  const DownloadBtn = ({ name, href }: { name: string; href: string }) => (
     <a
       href={href || undefined}
       target="_blank"
@@ -164,7 +175,7 @@ export default function NMT() {
         <polyline points="7 10 12 15 17 10"/>
         <line x1="12" y1="15" x2="12" y2="3"/>
       </svg>
-      {label ?? name}
+      {name}
     </a>
   );
 
@@ -180,11 +191,7 @@ export default function NMT() {
             <li><a href="https://nuevamath.club/nmt" style={{color: "var(--gold)"}}>NMT</a></li>
             <li><a href="https://nuevamath.club/contact">Contact Us</a></li>
           </ul>
-          <button
-            className="theme-btn"
-            aria-label="Toggle dark mode"
-            onClick={() => setDark(d => !d)}
-          >
+          <button className="theme-btn" aria-label="Toggle dark mode" onClick={() => setDark(d => !d)}>
             {dark ? "☀" : "☽"}
           </button>
         </div>
@@ -225,50 +232,27 @@ export default function NMT() {
 
         <p style={{
           fontSize: "1.05rem", lineHeight: 1.8, color: "var(--muted)",
-          maxWidth: "70ch", marginBottom: "2.5rem", fontWeight: 400,
+          maxWidth: "100ch", marginBottom: "2.5rem", fontWeight: 400,
           opacity: 0, animation: "fadeUp 0.8s ease 0.6s forwards",
           position: "relative", zIndex: 1,
         }}>
-          Registration for NMT 2026 is open! If you are a coach and would like to register teams from your school/organization, please fill out the two forms below by March 25th.
+          Registration for NMT 2026 is open! If you are a coach and would like to register teams from your school/organization, please fill out the registration form by Sunday, March 22nd, and the student information form by Wednesday, March 25th.
         </p>
 
-        <div style={{
-          display: "flex", gap: 12, justifyContent: "center",
-          alignItems: "center", flexWrap: "wrap",
-        }}>
+        <div style={{ display: "flex", gap: 12, justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}>
           <div style={{ opacity: 0, animation: "fadeUp 0.8s ease 0.8s forwards", position: "relative", zIndex: 1 }}>
-            <a
-              href="https://forms.gle/SFnEVeXCWZ5Uu6P37"
-              target="_blank" rel="noopener noreferrer"
+            <a href="https://forms.gle/SFnEVeXCWZ5Uu6P37" target="_blank" rel="noopener noreferrer"
               style={{ ...btnStyle, display: "inline-block" }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.background = "var(--gold-lt)";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.background = "var(--gold)";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-              }}
-            >
-              Registration Form
-            </a>
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--gold-lt)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "var(--gold)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
+            >Registration Form</a>
           </div>
           <div style={{ opacity: 0, animation: "fadeUp 0.8s ease 0.8s forwards", position: "relative", zIndex: 1 }}>
-            <a
-              href="https://forms.gle/r3pSPaDHrnAUoenr9"
-              target="_blank" rel="noopener noreferrer"
+            <a href="https://forms.gle/r3pSPaDHrnAUoenr9" target="_blank" rel="noopener noreferrer"
               style={{ ...btnStyle, display: "inline-block" }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLElement).style.background = "var(--gold-lt)";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLElement).style.background = "var(--gold)";
-                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-              }}
-            >
-              Student Info Form
-            </a>
+              onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = "var(--gold-lt)"; (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = "var(--gold)"; (e.currentTarget as HTMLElement).style.transform = "translateY(0)"; }}
+            >Student Info Form</a>
           </div>
         </div>
       </div>
@@ -278,13 +262,91 @@ export default function NMT() {
       {/* ── ABOUT ── */}
       <div className="about">
         <span className="section-tag">ABOUT NMT</span>
-        <div style={{display: "flex", flexDirection: "column", gap: "1.25rem", alignItems: "center", justifyContent: "center"}}>
+        <div style={{display: "flex", flexDirection: "column", gap: "1.25rem"}}>
           <p className="section-body">
             Founded in 2024, the Nueva Math Tournament (NMT) is an annual math competition organized and hosted entirely by members of the Nueva Math Club. Each spring, we invite middle schoolers from across the Bay Area to The Nueva School's San Mateo campus to compete in individual and team rounds covering a range of topics and difficulty levels. Whether you're a first-time competitor or a seasoned mathlete, NMT offers an exciting environment to test your skills and connect with other mathematicians. We hope our competition can foster a love for problem-solving and create a supportive community where students can grow and thrive in mathematics!
           </p>
           <p className="section-body">
             The competition lasts from 4:30pm to 9:30pm and consists of an individual round, a puzzle round, and a team round. Participants are provided a pizza dinner, and we also offer activities and tiebreakers between the final round and the award ceremony. Participation costs $10 per student, which will be handled shortly after registration and is to be paid by the participating school/organization. Each team must have a responsible adult (coach or parent) on site for the duration of the contest. One coach can be responsible for two teams, but if a school is bringing more than two teams, they need to bring enough adults to have one adult for every two teams.
           </p>
+        </div>
+      </div>
+
+      <div className="divider" />
+
+      {/* ── SCHEDULE ── */}
+      <div className="about" style={{paddingTop: "5rem", paddingBottom: "5rem"}}>
+        <span className="section-tag">DAY-OF SCHEDULE</span>
+        <p className="section-body" style={{marginTop: "0.25rem", marginBottom: "2.5rem"}}>
+          Below is a general outline of the tournament day, although exact times may shift slightly as we finalize logistics.
+        </p>
+
+        <div style={{position: "relative"}}>
+
+          <div style={{display: "flex", flexDirection: "column", gap: "0"}}>
+            {schedule.map((item, i) => (
+              <div key={i} style={{
+                display: "grid",
+                gridTemplateColumns: "200px 24px 1fr",
+                gap: "0 1.5rem",
+                alignItems: "start",
+                padding: "1.5rem 0",
+                borderBottom: i < schedule.length - 1 ? "1px solid var(--border)" : "none",
+              }}>
+                {/* Time */}
+                <div style={{
+                  fontFamily: "'DM Mono', monospace", fontSize: "0.78rem",
+                  letterSpacing: "0.08em", color: "var(--gold)",
+                  textAlign: "right", paddingTop: "2px",
+                }}>
+                  {item.time}
+                </div>
+
+                {/* Dot on the line */}
+                <div style={{
+                  display: "flex", justifyContent: "center", paddingTop: "6px",
+                }}>
+                  <div style={{
+                    width: "9px", height: "9px", borderRadius: "50%",
+                    background: "var(--gold)", flexShrink: 0,
+                    boxShadow: "0 0 0 3px var(--bg-mid)",
+                    position: "relative", zIndex: 1,
+                  }} />
+                </div>
+
+                {/* Content */}
+                <div>
+                  <div style={{
+                    display: "flex", alignItems: "baseline", gap: "0.75rem",
+                    flexWrap: "wrap", marginBottom: "0.35rem",
+                  }}>
+                    <div style={{
+                      fontFamily: "'Playfair Display', serif", fontWeight: 700,
+                      fontSize: "1rem", color: "var(--cream)",
+                    }}>
+                      {item.event}
+                    </div>
+                    {item.note && (
+                      <span style={{
+                        fontFamily: "'DM Mono', monospace", fontSize: "0.65rem",
+                        letterSpacing: "0.1em", textTransform: "uppercase",
+                        color: "var(--muted)", border: "1px solid var(--border)",
+                        padding: "0.15rem 0.5rem",
+                      }}>
+                        {item.note}
+                      </span>
+                    )}
+                  </div>
+                  <p style={{
+                    fontSize: "0.88rem", color: "var(--muted)",
+                    lineHeight: 1.6, fontWeight: 400, margin: 0,
+                  }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -301,12 +363,9 @@ export default function NMT() {
           {pastTests.map(t => (
             <div key={t.year} style={{
               background: "var(--bg-mid)", padding: "1.75rem 2rem",
-              display: "grid",
-              gridTemplateColumns: "100px 1fr",
-              gap: "1.25rem",
-              alignItems: "center",
+              display: "grid", gridTemplateColumns: "100px 1fr",
+              gap: "1.25rem", alignItems: "center",
             }}>
-              {/* Year label spanning both rows */}
               <div style={{
                 fontFamily: "'Playfair Display', serif", fontWeight: 700,
                 fontSize: "1.05rem", color: "var(--cream)",
@@ -315,23 +374,17 @@ export default function NMT() {
                 {t.year}
               </div>
 
-              {/* Row 1: Tests */}
               <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap"}}>
                 <span style={{...monoTagStyle, marginBottom: 0}}>Tests</span>
                 <div style={{display: "flex", gap: "0.6rem", flexWrap: "wrap"}}>
-                  {t.tests.map(r => (
-                    <DownloadBtn key={r.name} name={r.name} href={r.href} />
-                  ))}
+                  {t.tests.map(r => <DownloadBtn key={r.name} name={r.name} href={r.href} />)}
                 </div>
               </div>
 
-              {/* Row 2: Solutions */}
               <div style={{display: "flex", alignItems: "center", justifyContent: "space-between", gap: "0.75rem", flexWrap: "wrap"}}>
                 <span style={{...monoTagStyle, marginBottom: 0}}>Solutions</span>
                 <div style={{display: "flex", gap: "0.6rem", flexWrap: "wrap"}}>
-                  {t.solutions.map(r => (
-                    <DownloadBtn key={r.name} name={r.name} href={r.href} />
-                  ))}
+                  {t.solutions.map(r => <DownloadBtn key={r.name} name={r.name} href={r.href} />)}
                 </div>
               </div>
             </div>
