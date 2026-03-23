@@ -19,7 +19,7 @@ const EMAILJS_SERVICE_ID  = "YOUR_SERVICE_ID";   // ← replace
 const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";  // ← replace
 const EMAILJS_PUBLIC_KEY  = "YOUR_PUBLIC_KEY";    // ← replace
 
-const CONTACT_EMAIL = "mathclub@nuevaschool.org";
+const CONTACT_EMAIL = "nuevamathclub@nuevaschool.org";
 
 export default function Contact() {
   const [dark, setDark] = useState(true);
